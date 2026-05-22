@@ -78,11 +78,6 @@ Projet d’audit et de sécurisation d’une infrastructure (Windows / Linux / A
 > _Ce projet montre ma capacité à mener un audit de bout en bout, à utiliser des outils avancés et à produire un rapport exploitable._
 
 
-## 📄 Rapport d’audit complet (PDF)
-
-Vous pouvez consulter mon rapport ici :
-
-👉 [Télécharger le rapport d’audit Active Directory (PDF)](Rapport_Audit_AD.pdf)
 
 ---
 
