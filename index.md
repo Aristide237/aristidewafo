@@ -125,7 +125,17 @@ Script Bash permettant de configurer automatiquement des VLANs et interfaces dan
 **Extrait de code :**
 ```bash
 # Exemple (à adapter)
-#!/bin/bash
+
+## 🔐 Projet : Audit & Sécurisation Réseau
+
+Projet d’audit et de durcissement d’une architecture réseau :
+- segmentation en VLAN,
+- mise en place d’un firewall avec politique restrictive,
+- déploiement d’un IDS Suricata,
+- rédaction d’un rapport d’audit et de recommandations.
+
+👉 [Voir le projet complet](./audit-reseau/README.md)
+
 ip link add link eth0 name eth0.10 type vlan id 10
 ip addr add 192.168.10.1/24 dev eth0.10
 ip link set eth0.10 up
