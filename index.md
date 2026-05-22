@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Aristide WAFO - Cybersecurity Portfolio"
 ---
 
