@@ -13,7 +13,7 @@ Motivé et autonome, je souhaite contribuer à des projets concrets en cyberséc
 
 ---
 
-## 🧑‍💻 À propos
+## 🧑‍💻 À propos de moi 
 
 - 🎓 Master of Engineering – cybersécurité - SUPINFO  
 - 🌍 Basé en Île-de-France  
@@ -27,7 +27,7 @@ Motivé et autonome, je souhaite contribuer à des projets concrets en cyberséc
 ## 🛠️ Compétences techniques
 
 **Systèmes & Réseaux**  
--Active Directory, ADCS, DNS, DHCP
+- Active Directory, ADCS, DNS, DHCP
 - Administration Linux (Kali)  
 - Administration Windows (serveurs, AD de base)  
 - VLAN, routage, services réseau de base
@@ -36,14 +36,14 @@ Motivé et autonome, je souhaite contribuer à des projets concrets en cyberséc
 -  Cisco Networking Academy (routing, switching, VLANs)
 
 ## Cybersécurité
--Analyse Active Directory (BloodHound, Neo4j)
--Audit Windows (winPEAS, HardeningKitty, Hayabusa)
--Sécurité réseau (VLAN, segmentation, firewalling)
--Scan de vulnérabilité (Nmap)
--Analyse réseau (Wireshark, tcpdump)
--IDS/IPS : Suricata
--Chiffrement & PKI (GPG, OpenSSL, certificats X.509)
--Tests et challenge sécurité (TryHackMe)
+- Analyse Active Directory (BloodHound, Neo4j)
+- Audit Windows (winPEAS, HardeningKitty, Hayabusa)
+- Sécurité réseau (VLAN, segmentation, firewalling)
+- Scan de vulnérabilité (Nmap)
+- Analyse réseau (Wireshark, tcpdump)
+- IDS/IPS : Suricata
+- Chiffrement & PKI (GPG, OpenSSL, certificats X.509)
+- Tests et challenge sécurité (TryHackMe)
 
 
 **Automatisation & Scripting**  
