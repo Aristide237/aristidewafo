@@ -5,37 +5,46 @@ title: "Aristide WAFO - Cybersecurity Portfolio"
 
 # 👋 Aristide WAFO
 
-**Étudiant en Master Informatique (Systèmes, Réseaux, Sécurité)**  
-Passionné par l’**audit**, la **sécurisation d’infrastructures**, l’**analyse Active Directory** et les **labs pratiques** (TryHackMe, TP, CTF).
-
-> Je conçois, audite et sécurise des infrastructures.  
+**Étudiant en Master of engineering - cybersécurité **  
+Passionné par le sécurité des sytèmes et réseaux, je developpe des compétences en audit Active Directory, analyse de vulnérabilités et détections d'intrusions.
+Motivé et autonome, je souhaite contribuer à des projets concrets en cybersécurité.
+ 
 > Ce portfolio présente mes projets, mes labs et mes outils.
 
 ---
 
 ## 🧑‍💻 À propos
 
-- 🎓 Master Informatique (Systèmes, Réseaux, Sécurité) – SUPINFO  
+- 🎓 Master of Engineering – cybersécurité - SUPINFO  
 - 🌍 Basé en Île-de-France  
 - 🎯 Intérêt fort pour :  
   - Audit d’infrastructure (Windows / Linux / AD)  
   - Blue Team, SOC, détection & réponse  
-  - Automatisation (scripts Bash, outils d’audit)  
+  - Administration et sécurité des réseaux  
 
 ---
 
 ## 🛠️ Compétences techniques
 
 **Systèmes & Réseaux**  
-- Administration Linux (Kali, Debian, Ubuntu)  
+-Active Directory, ADCS, DNS, DHCP
+- Administration Linux (Kali)  
 - Administration Windows (serveurs, AD de base)  
 - VLAN, routage, services réseau de base
+- Configuration firewall (iptables)
+- Sécurisation des accès
+-  Cisco Networking Academy (routing, switching, VLANs)
 
-**Sécurité & Audit**  
-- Nmap, Wireshark, Suricata  
-- BloodHound + Neo4j  
-- HardeningKitty, Hayabusa, winPEAS  
-- Analyse de logs, détection d’événements suspects
+## Cybersécurité
+-Analyse Active Directory (BloodHound, Neo4j)
+-Audit Windows (winPEAS, HardeningKitty, Hayabusa)
+-Sécurité réseau (VLAN, segmentation, firewalling)
+-Scan de vulnérabilité (Nmap)
+-Analyse réseau (Wireshark, tcpdump)
+-IDS/IPS : Suricata
+-Chiffrement & PKI (GPG, OpenSSL, certificats X.509)
+-Tests et challenge sécurité (TryHackMe)
+
 
 **Automatisation & Scripting**  
 - Bash (ex : `setup-vlans.sh`)  
@@ -43,7 +52,7 @@ Passionné par l’**audit**, la **sécurisation d’infrastructures**, l’**an
 
 **Plateformes & Labs**  
 - TryHackMe (SOC, PreSecurity, Blue Team, etc.)  
-- Labs personnels (VMware / VirtualBox)
+- Labs personnels (VMware)
 
 ---
 
