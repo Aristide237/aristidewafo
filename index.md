@@ -111,12 +111,14 @@ sécurisation.
   - suricata
  
   **Méthodologie :**
+  
   Phase 1 : Audit et analyse
   - Analyse du trafic (Wireshark)
   - Cartographie réseau
   - Scan de vulnérabilités (Nmap)
   - Matrice des vulnérabilités
   - Scénario d'attaque
+    
   Phase 2 : Remédiation et sécurisation
   - Plan de remédiation
   - Plan d'adressage sécurisé
