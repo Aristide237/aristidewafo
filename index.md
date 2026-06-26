@@ -152,7 +152,7 @@ Ce projet met en œuvre :
 - gestion isolée des clés via GNUPGHOME
 
 ### 📄 Rapport PDF
-👉 [Télécharger le rapport](RAPPORT%20DE%20PROJET%20SYSTÈME%20DE%20MESSAGERIE%20SÉCURISÉE.pdf)
+👉 [📄 Télécharger le rapport](rapport_messagerie_securisee.pdf) 
 
 ### 🧰 Scripts du projet
 - [creer_utilisateur.sh](scripts/creer_utilisateur.sh)
