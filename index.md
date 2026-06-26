@@ -91,8 +91,55 @@ Projet d’audit et de sécurisation d’une infrastructure (Windows / Linux / A
 ## 📄 Rapport d’audit Active Directory (PDF)
 👉 [Télécharger le rapport](rapport_audit_AD.pdf)
 
+## 2 — Audit & Sécurisation d’une Infrastructure Réseau
+**Contexte :**  
+Vous êtes missionnés en tant que consultants en sécurité réseau pour l'entreprise fictive
+NetSecure Corp. Cette PME de 200 employés dispose d'une infrastructure réseau
+classique présentant plusieurs failles de sécurité. Votre mission : auditer l'infrastructure
+existante, identifier les vulnérabilités, puis proposer et implémenter un plan de
+sécurisation.
 
-## 2-🔐 Projet : Système de Messagerie Sécurisée
+**Objectifs :** 
+- Cartographier et auditer l'infra
+- Proposer un plan de rémédiation
+- implémentation technique
+
+  **Outils utilisés :**
+  - wireshark
+  - Nmap
+  - iptables
+  - suricata
+ 
+  **Méthodologie :**
+  Phase 1 : Audit et analyse
+  - Analyse du trafic (Wireshark)
+  - Cartographie réseau
+  - Scan de vulnérabilités (Nmap)
+  - Matrice des vulnérabilités
+  - Scénario d'attaque
+  Phase 2 : Remédiation et sécurisation
+  - Plan de remédiation
+  - Plan d'adressage sécurisé
+  - Firewall (iptables/nftables)
+  - Règles Suricata
+  - Sécurisation des accès
+ 
+  **Résultats & livrables :**
+  -  Rapport technique
+  -   Archive de configurations (ZIP) contenant : script firewall (iptables ou nftables), règles
+Suricata (.rules), nouveau plan d'adressage (CSV), config SSH et 802.1X.
+
+### 📄 Rapport PDF  
+👉 [Télécharger le rapport](Rapport.pdf)
+
+### 🗂️ Fichiers de configuration  
+- 🔥 [Règles Firewall (iptables)](configs/firewall_rules.txt)  
+- 🛡️ [Règles IDS Suricata](configs/suricata_rules.txt)  
+- 🌐 [Configuration VLAN](configs/vlan_config.txt)  
+
+
+  
+## 3 - Système de Messagerie Sécurisée
 
 Infrastructure complète de messagerie chiffrée basée sur **GnuPG**, **OpenSSL** et une **PKI interne**.  
 Ce projet met en œuvre :  
