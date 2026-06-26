@@ -83,17 +83,24 @@ Projet d’audit et de sécurisation d’une infrastructure (Windows / Linux / A
 👉 [Télécharger le rapport](rapport_audit_AD.pdf)
 
 
-## 2-Projet : Système de Messagerie Sécurisée
+## 2-🔐 Projet : Système de Messagerie Sécurisée
 
-Infrastructure complète de messagerie chiffrée basée sur GnuPG, OpenSSL et une PKI interne.
+Infrastructure complète de messagerie chiffrée basée sur **GnuPG**, **OpenSSL** et une **PKI interne**.  
+Ce projet met en œuvre :  
+- génération automatisée de clés GPG  
+- création d’une Autorité de Certification (CA)  
+- signature et chiffrement asymétrique  
+- scripts Bash pour l’envoi et la lecture de messages sécurisés  
+- gestion isolée des clés via GNUPGHOME
 
 ### 📄 Rapport PDF
-👉 [Télécharger le rapport](RAPPORT_DE_PROJET_SYSTÈME_DE_MESSAGERIE_SÉCURISÉE.pdf)
+👉 [Télécharger le rapport](RAPPORT%20DE%20PROJET%20SYSTÈME%20DE%20MESSAGERIE%20SÉCURISÉE.pdf)
 
 ### 🧰 Scripts du projet
 - [creer_utilisateur.sh](scripts/creer_utilisateur.sh)
 - [ecrire_message.sh](scripts/ecrire_message.sh)
 - [lire_message.sh](scripts/lire_message.sh)
+
 
 
 ### 3. TP – Reconnaissance & Scanning réseau (Nmap + Wireshark)
