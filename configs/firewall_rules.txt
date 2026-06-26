@@ -1,0 +1,99 @@
+#!/bin/bash
+
+### ================================
+###  CONFIGURATION DES INTERFACES
+### ================================
+IF_VLAN10="vlan10"
+IF_VLAN20="vlan20"
+IF_VLAN30="vlan30"
+IF_VLAN40="vlan40"
+IF_VLAN50="vlan50"
+IF_WAN="eth0"
+
+### ================================
+###  RESET DES REGLES
+### ================================
+iptables -F
+iptables -X
+iptables -t nat -F
+iptables -t nat -X
+iptables -t mangle -F
+iptables -t mangle -X
+
+### ================================
+###  POLITIQUES PAR DÉFAUT
+### ================================
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+
+### ================================
+###  LOGGING DES PAQUETS REFUSÉS
+### ================================
+iptables -N LOG_DROP
+iptables -A LOG_DROP -m limit --limit 5/min -j LOG --log-prefix "FW-DROP: " --log-level 4
+iptables -A LOG_DROP -j DROP
+
+### ================================
+###  REGLES GENERALES
+### ================================
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+### ================================
+###  VLAN 10 (ADMIN)
+### ================================
+iptables -A FORWARD -i $IF_VLAN10 -o $IF_VLAN20 -p tcp -m multiport --dports 22,3389 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN10 -o $IF_VLAN30 -p tcp -m multiport --dports 22,3389,5985 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN10 -o $IF_VLAN40 -p tcp -m multiport --dports 22,3389 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN10 -o $IF_VLAN50 -j LOG_DROP
+
+### ================================
+###  VLAN 20 (EMPLOYÉS)
+### ================================
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN30 -p udp --dport 53 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN30 -p tcp --dport 53 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN30 -p tcp -m multiport --dports 80,443,445 -j ACCEPT
+
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_WAN -p tcp -m multiport --dports 80,443 -j ACCEPT
+
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN10 -j LOG_DROP
+
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN40 -p tcp -m multiport --dports 80,443 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN40 -j LOG_DROP
+
+iptables -A FORWARD -i $IF_VLAN20 -o $IF_VLAN50 -j LOG_DROP
+
+### ================================
+###  VLAN 30 (SERVEURS)
+### ================================
+iptables -A FORWARD -i $IF_VLAN30 -o $IF_VLAN20 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN30 -o $IF_VLAN10 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN30 -o $IF_VLAN40 -p tcp -m multiport --dports 3306,5432,1433 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN30 -o $IF_VLAN50 -j LOG_DROP
+
+### ================================
+###  VLAN 40 (DMZ)
+### ================================
+iptables -A FORWARD -i $IF_VLAN40 -o $IF_WAN -p tcp -m multiport --dports 80,443 -j ACCEPT
+iptables -A FORWARD -i $IF_VLAN40 -o $IF_VLAN30 -p tcp -m multiport --dports 3306,5432,1433 -j ACCEPT
+
+iptables -A FORWARD -i $IF_VLAN40 -o $IF_VLAN10 -j LOG_DROP
+iptables -A FORWARD -i $IF_VLAN40 -o $IF_VLAN20 -j LOG_DROP
+iptables -A FORWARD -i $IF_VLAN40 -o $IF_VLAN50 -j LOG_DROP
+
+### ================================
+###  VLAN 50 (INVITÉS)
+### ================================
+iptables -A FORWARD -i $IF_VLAN50 -o $IF_WAN -p tcp -m multiport --dports 80,443 -j ACCEPT
+
+iptables -A FORWARD -i $IF_VLAN50 -o $IF_VLAN10 -j LOG_DROP
+iptables -A FORWARD -i $IF_VLAN50 -o $IF_VLAN20 -j LOG_DROP
+iptables -A FORWARD -i $IF_VLAN50 -o $IF_VLAN30 -j LOG_DROP
+iptables -A FORWARD -i $IF_VLAN50 -o $IF_VLAN40 -j LOG_DROP
+
+echo "[OK] Firewall chargé."
