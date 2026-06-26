@@ -83,9 +83,20 @@ Projet d’audit et de sécurisation d’une infrastructure (Windows / Linux / A
 👉 [Télécharger le rapport](rapport_audit_AD.pdf)
 
 
----
+## 2-Projet : Système de Messagerie Sécurisée
 
-### 2. TP – Reconnaissance & Scanning réseau (Nmap + Wireshark)
+Infrastructure complète de messagerie chiffrée basée sur GnuPG, OpenSSL et une PKI interne.
+
+### 📄 Rapport PDF
+👉 [Télécharger le rapport](RAPPORT_DE_PROJET_SYSTÈME_DE_MESSAGERIE_SÉCURISÉE.pdf)
+
+### 🧰 Scripts du projet
+- [creer_utilisateur.sh](scripts/creer_utilisateur.sh)
+- [ecrire_message.sh](scripts/ecrire_message.sh)
+- [lire_message.sh](scripts/lire_message.sh)
+
+
+### 3. TP – Reconnaissance & Scanning réseau (Nmap + Wireshark)
 
 **Objectif :**  
 Identifier les hôtes actifs, les ports ouverts et analyser le trafic réseau.
